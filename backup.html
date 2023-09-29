@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        button:hover {
+            color: #064F9B
+        }
+
+        button.active,
+        button:active {
+            background-color: #064F9B;
+            color: white;
+        }
+
+        #courseInfo {
+            background-color: #F79220;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        @media screen and (max-width: 600px) {
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body onload="changeData(1)">
+    <div class="container">
+        <button onclick="changeData(1)" id="rectouring" class="menu">Rec & Touring Kayak</button>
+        <button onclick="changeData(2)" id="whitewater">Whitewater Kayaking</button>
+        <button onclick="changeData(3)" id="sup">SUP Boarding</button>
+        <button onclick="changeData(4)" id="youth">Youth & Teen Kayaking</button>
+        <button onclick="changeData(5)" id="instructor">Instructor Training</button>
+        <button onclick="changeData(6)" id="tours">Kayaking Tours</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Cost</th>
+                    <th></th>
+                    <!-- <th>Course Link</th> -->
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td id="cell1">Value 1</td>
+                    <td id="cell2">Value 2</td>
+                    <!-- <td id="cell3">Value 3</td> -->
+                    <td><a id="linkButton" href="https://www.example.com" target="_blank"><button>Course Info</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let currentLink = 'https://www.example.com'; // Initial link value
+
+        function changeData(buttonNumber) {
+            const tableBody = document.getElementById('tableBody');
+            const linkButton = document.getElementById('linkButton');
+
+            // Clear existing rows
+            tableBody.innerHTML = '';
+
+            switch (buttonNumber) {
+                case 1:
+                    addTableRow('New Value 1', 'New Value 2', 'https://www.aqoutdoors.com');
+                    addTableRow('New Value 1', 'New Value 2', 'https://www.aqoutdoors.com');
+                    addTableRow('New Value 1', 'New Value 2', 'https://www.aqoutdoors.com');
+                    addTableRow('New Value 1', 'New Value 2', 'https://www.aqoutdoors.com');
+                    break;
+                case 2:
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    addTableRow('Another Value 1', 'Another Value 2', 'https://www.bellsofsteel.us');
+                    break;
+                case 3:
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    break;
+                case 4:
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    break;
+                case 5:
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    break;
+                case 6:
+                    addTableRow('Yet Another Value 1', 'Yet Another Value 2', 'https://www.bellsofsteel.com');
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function addTableRow(value1, value2, link) {
+            const tableBody = document.getElementById('tableBody');
+            const newRow = tableBody.insertRow();
+
+            // Add cells
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            // const cell4 = newRow.insertCell(3);
+
+            // Set cell values
+            cell1.textContent = value1;
+            cell2.textContent = value2;
+            // cell3.textContent = value3;
+
+            // Set link and button
+            const linkButton = document.createElement('a');
+            linkButton.href = link;
+            linkButton.target = '_blank';
+            linkButton.innerHTML = '<button id="courseInfo">Course Info</button>';
+
+            cell3.appendChild(linkButton);
+
+
+
+        }
+
+        
+    </script>
+</body>
+</html>

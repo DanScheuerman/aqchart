@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        button.menu-button:hover,
+        button.menu-button:active {
+            background-color: #064F9B;
+            color: white;
+        }
+
+        /* button.active,
+        button:active {
+            background-color: #064F9B;
+            color: white;
+        } */
+
+        #courseInfo {
+            background-color: #F79220;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        @media screen and (max-width: 600px) {
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+
+    </style>
+</head>
+<body onload="changeData(1)">
+    <h2>AQ Outdoors Calgary Paddling Courses</h2>
+    <div class="container">
+        <button onclick="changeData(1)" id="rectouring" class="menu-button">Rec & Touring Kayak</button>
+        <button onclick="changeData(2)" id="whitewater">Whitewater Kayaking</button>
+        <button onclick="changeData(3)" id="sup">SUP Boarding</button>
+        <button onclick="changeData(4)" id="youth">Youth & Teen Kayaking</button>
+        <button onclick="changeData(5)" id="instructor">Instructor Training</button>
+        <button onclick="changeData(6)" id="tours">Kayaking Tours</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Cost</th>
+                    <th></th>
+                    <!-- <th>Course Link</th> -->
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td id="cell1">Value 1</td>
+                    <td id="cell2">Value 2</td>
+                    <!-- <td id="cell3">Value 3</td> -->
+                    <td><a id="linkButton" href="https://www.example.com" target="_blank"><button>Course Info</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let currentLink = 'https://www.example.com'; // Initial link value
+
+        function setButtonStyles(button, bgColor, textColor) {
+            button.style.backgroundColor = bgColor;
+            button.style.color = textColor;
+        }
+
+        function changeData(buttonNumber) {
+            const tableBody = document.getElementById('tableBody');
+            const linkButton = document.getElementById('linkButton');
+            const menuButton = document.getElementById('rectouring');
+            const whitewaterButton = document.getElementById('whitewater');
+            const supButton = document.getElementById('sup');
+            const youthButton = document.getElementById('youth');
+            const instructorButton = document.getElementById('instructor');
+            const toursButton = document.getElementById('tours');
+            // Clear existing rows
+            tableBody.innerHTML = '';
+
+            setButtonStyles(menuButton, 'transparent', 'black');
+            setButtonStyles(whitewaterButton, 'transparent', 'black');
+            setButtonStyles(supButton, 'transparent', 'black');
+            setButtonStyles(youthButton, 'transparent', 'black');
+            setButtonStyles(instructorButton, 'transparent', 'black');
+            setButtonStyles(toursButton, 'transparent', 'black');
+
+            // Set styles for the clicked button
+            switch (buttonNumber) {
+                case 1:
+                    setButtonStyles(menuButton, '#064F9B', 'white');
+                    break;
+                case 2:
+                    setButtonStyles(whitewaterButton, '#064F9B', 'white');
+                    // Add data for button 2 if needed
+                    break;
+                case 3:
+                    setButtonStyles(supButton, '#064F9B', 'white');
+                    // Add data for button 3 if needed
+                    break;
+                case 4:
+                    setButtonStyles(youthButton, '#064F9B', 'white');
+                    // Add data for button 4 if needed
+                    break;
+                case 5:
+                    setButtonStyles(instructorButton, '#064F9B', 'white');
+                    // Add data for button 5 if needed
+                    break;
+                case 6:
+                    setButtonStyles(toursButton, '#064F9B', 'white');
+                    // Add data for button 6 if needed
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonNumber) {
+                case 1:
+                    addTableRow('Intro to Adventure Rec Kayaking', '$219.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITARK');
+                    addTableRow('Quick Start', '$89.95 + GST', 'https://aqoutdoors.com/apps/courses/course/QS');
+                    addTableRow('Quick Start Plus', '$164.95 + GST', 'https://aqoutdoors.com/apps/courses/course/QSP');
+                    addTableRow('Intro to Sea Kayaking', '$279.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITK');
+                    break;
+                case 2:
+                    addTableRow('Intro to Whitewater Kayaking', '$349.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITRK');
+                    addTableRow('Beyon the Intro', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/BI');
+                    addTableRow('River Kayaking - The Next Step', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/BI');
+                    addTableRow('5 Days Whitewater Kayaking Course - Instruction Only', '$895.00 + GST', 'https://aqoutdoors.com/apps/courses/course/5DWKC');
+                    addTableRow('Beyond the Intro Evenings', '$399 + GST', 'https://aqoutdoors.com/apps/courses/course/CBTIE');
+                    addTableRow('Adult Kayak Club', '$779.95 + GST', 'https://aqoutdoors.com/apps/courses/course/AKC');
+                    addTableRow('Introduction to Creek Boating', '$369.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITCB');
+                    addTableRow('BC 5 Day Whitewater Kayaking Course - Instruction Only', '$995.00 + GST', 'https://aqoutdoors.com/apps/courses/course/B5DWKCIO');
+                    addTableRow('Kootenay River Raft Supported Kayak Trip', '$849.00 + GST', 'https://aqoutdoors.com/apps/courses/course/KRRSKT');
+                    break;
+                case 3:
+                    addTableRow('SUP Start Up', '$89.95 + GST', 'https://aqoutdoors.com/apps/courses/course/SSU');
+                    break;
+                case 4:
+                    addTableRow('Youth Padde Sports 5 Day', '$499.00 + GST', 'https://aqoutdoors.com/apps/courses/course/YRR5D');
+                    addTableRow('Teen River Kayaking 5 Day', '$499.00 + GST', 'https://aqoutdoors.com/apps/courses/course/YRK5DI');
+                    addTableRow('Youth Kayak Pool Sessions', '$175.00 + GST', 'https://aqoutdoors.com/apps/courses/course/GKPS');
+                    addTableRow('Micro Groms Kayak Club', 'Yet Another Value 2', 'https://aqoutdoors.com/apps/courses/course/SGKC');
+                    addTableRow('Super Groms Kayak Club', '$449.95 + GST', 'https://aqoutdoors.com/apps/courses/course/SGKC');
+                    addTableRow('Teen Kayak Club', '$749.00 + GST', 'https://aqoutdoors.com/apps/courses/course/TKC');
+                    break;
+                case 5:
+                    addTableRow('AWA/CKC L2/I2 Training Course ', '$349 plus $120 AWA Fee + GST', 'https://aqoutdoors.com/apps/courses/course/AL2I2C');
+                    break;
+                case 6:
+                    addTableRow('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function addTableRow(value1, value2, link) {
+            const tableBody = document.getElementById('tableBody');
+            const newRow = tableBody.insertRow();
+
+            // Add cells
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            // const cell4 = newRow.insertCell(3);
+
+            // Set cell values
+            cell1.textContent = value1;
+            cell2.textContent = value2;
+            // cell3.textContent = value3;
+
+            // Set link and button
+            const linkButton = document.createElement('a');
+            linkButton.href = link;
+            linkButton.target = '_blank';
+            linkButton.innerHTML = '<button id="courseInfo">Course Info</button>';
+
+            cell3.appendChild(linkButton);
+
+
+
+        }
+        
+    </script>
+</body>
+</html>
