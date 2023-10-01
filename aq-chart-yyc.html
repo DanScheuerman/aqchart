@@ -4,84 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AQ Chart Test</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h2 {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        button {
-            padding: 10px 20px;
-            background-color: transparent;
-            color: black;
-            border: none;
-            cursor: pointer;
-            margin: 5px;
-            transition: color 0.3s, background-color 0.3s;
-        }
-
-        button.menu-button:hover,
-        button.menu-button:active {
-            background-color: #064F9B;
-            color: white;
-        }
-
-        /* button.active,
-        button:active {
-            background-color: #064F9B;
-            color: white;
-        } */
-
-        #courseInfo {
-            background-color: #F79220;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        
-        
-        th {
-            background-color: #f2f2f2;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        @media screen and (max-width: 600px) {
-            button {
-                width: 100%;
-                margin: 5px 0;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="aq-chart-master.css" />
 </head>
-<body onload="changeData(1)">
-    <h2>AQ Outdoors Calgary Paddling Courses</h2>
-    <div class="container">
+<h2 style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; border-style: solid; border-color: #F79220; ">Calgary Paddling Courses</h2>
+    <div class="container" style="text-align: center;">
         <button onclick="changeData(1)" id="rectouring" class="menu-button">Rec & Touring Kayak</button>
         <button onclick="changeData(2)" id="whitewater">Whitewater Kayaking</button>
         <button onclick="changeData(3)" id="sup">SUP Boarding</button>
@@ -174,8 +100,8 @@
                     break;
                 case 2:
                     addTableRow('Intro to Whitewater Kayaking', '$349.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITRK');
-                    addTableRow('Beyon the Intro', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/BI');
-                    addTableRow('River Kayaking - The Next Step', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/BI');
+                    addTableRow('Beyond the Intro', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/BI');
+                    addTableRow('River Kayaking - The Next Step', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/RKTNS');
                     addTableRow('5 Days Whitewater Kayaking Course - Instruction Only', '$895.00 + GST', 'https://aqoutdoors.com/apps/courses/course/5DWKC');
                     addTableRow('Beyond the Intro Evenings', '$399 + GST', 'https://aqoutdoors.com/apps/courses/course/CBTIE');
                     addTableRow('Adult Kayak Club', '$779.95 + GST', 'https://aqoutdoors.com/apps/courses/course/AKC');
@@ -187,7 +113,7 @@
                     addTableRow('SUP Start Up', '$89.95 + GST', 'https://aqoutdoors.com/apps/courses/course/SSU');
                     break;
                 case 4:
-                    addTableRow('Youth Padde Sports 5 Day', '$499.00 + GST', 'https://aqoutdoors.com/apps/courses/course/YRR5D');
+                    addTableRow('Youth Paddle Sports 5 Day', '$499.00 + GST', 'https://aqoutdoors.com/apps/courses/course/YRR5D');
                     addTableRow('Teen River Kayaking 5 Day', '$499.00 + GST', 'https://aqoutdoors.com/apps/courses/course/YRK5DI');
                     addTableRow('Youth Kayak Pool Sessions', '$175.00 + GST', 'https://aqoutdoors.com/apps/courses/course/GKPS');
                     addTableRow('Micro Groms Kayak Club', 'Yet Another Value 2', 'https://aqoutdoors.com/apps/courses/course/SGKC');
@@ -209,11 +135,6 @@
             const tableBody = document.getElementById('tableBody');
             const newRow = tableBody.insertRow();
 
-                        // Set cell values
-                        cell1.textContent = value1;
-            cell2.textContent = value2;
-            // cell3.textContent = value3;
-
             // Add cells
             const cell1 = newRow.insertCell(0);
             const cell2 = newRow.insertCell(1);
@@ -233,10 +154,8 @@
 
             cell3.appendChild(linkButton);
 
-
-
         }
         
     </script>
-</body>
-</html>
+    </body>
+    </html>
