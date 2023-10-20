@@ -8,9 +8,9 @@
 </head>
 <h2 style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; border-style: solid; border-color: #F79220; ">Calgary Paddling Courses</h2>
     <div class="container" style="text-align: center;">
-        <button onclick="changeData(1)" id="rectouring" class="menu-button">Rec & Touring Kayak</button>
+        <button onclick="changeData(1)" id="rectouring" class="menu-button">Recreational & Touring Kayak</button>
         <button onclick="changeData(2)" id="whitewater">Whitewater Kayaking</button>
-        <button onclick="changeData(3)" id="sup">SUP Boarding</button>
+        <button onclick="changeData(3)" id="sup">Paddleboarding</button>
         <button onclick="changeData(4)" id="youth">Youth & Teen Kayaking</button>
         <button onclick="changeData(5)" id="instructor">Instructor Training</button>
         <button onclick="changeData(6)" id="tours">Kayaking Tours</button>
@@ -20,6 +20,7 @@
                 <tr>
                     <th>Course</th>
                     <th>Cost</th>
+                    <th>Experience Level</th>
                     <th></th>
                     <!-- <th>Course Link</th> -->
                 </tr>
@@ -28,7 +29,7 @@
                 <tr>
                     <td id="cell1">Value 1</td>
                     <td id="cell2">Value 2</td>
-                    <!-- <td id="cell3">Value 3</td> -->
+                    <td id="cell3">Value 3</td>
                     <td><a id="linkButton" href="https://www.example.com" target="_blank"><button>Course Info</button></a></td>
                 </tr>
             </tbody>
@@ -93,45 +94,45 @@
 
             switch (buttonNumber) {
                 case 1:
-                    addTableRow('Intro to Adventure Rec Kayaking', '$219.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITARK');
-                    addTableRow('Quick Start', '$89.95 + GST', 'https://aqoutdoors.com/apps/courses/course/QS');
-                    addTableRow('Quick Start Plus', '$164.95 + GST', 'https://aqoutdoors.com/apps/courses/course/QSP');
-                    addTableRow('Intro to Sea Kayaking', '$279.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITK');
+                    addTableRow('Intro to Adventure Recreational Kayaking', '$219.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/ITARK');
+                    addTableRow('Quick Start', '$89.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/QS');
+                    addTableRow('Quick Start Plus', '$164.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/QSP');
+                    addTableRow('Intro to Sea Kayaking', '$279.95 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/ITK');
                     break;
                 case 2:
-                    addTableRow('Intro to Whitewater Kayaking', '$349.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITRK');
-                    addTableRow('Beyond the Intro', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/BI');
-                    addTableRow('River Kayaking - The Next Step', '$139.00 + GST', 'https://aqoutdoors.com/apps/courses/course/BI');
-                    addTableRow('5 Days Whitewater Kayaking Course - Instruction Only', '$895.00 + GST', 'https://aqoutdoors.com/apps/courses/course/5DWKC');
-                    addTableRow('Beyond the Intro Evenings', '$399 + GST', 'https://aqoutdoors.com/apps/courses/course/CBTIE');
-                    addTableRow('Adult Kayak Club', '$779.95 + GST', 'https://aqoutdoors.com/apps/courses/course/AKC');
-                    addTableRow('Introduction to Creek Boating', '$369.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITCB');
-                    addTableRow('BC 5 Day Whitewater Kayaking Course - Instruction Only', '$995.00 + GST', 'https://aqoutdoors.com/apps/courses/course/B5DWKCIO');
-                    addTableRow('Kootenay River Raft Supported Kayak Trip', '$849.00 + GST', 'https://aqoutdoors.com/apps/courses/course/KRRSKT');
+                    addTableRow('Intro to Whitewater Kayaking', '$349.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/ITRK');
+                    addTableRow('Beyond the Intro', '$139.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/BI');
+                    addTableRow('River Kayaking - The Next Step', '$139.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/BI');
+                    addTableRow('5 Days Whitewater Kayaking Course - Instruction Only','$895.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/5DWKC');
+                    addTableRow('Beyond the Intro Evenings', '$399 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/CBTIE');
+                    addTableRow('Adult Kayak Club', '$779.95 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/AKC');
+                    addTableRow('Introduction to Creek Boating', '$369.95 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/ITCB');
+                    addTableRow('BC 5 Day Whitewater Kayaking Course - Instruction Only','$995.00 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/B5DWKCIO');
+                    addTableRow('Kootenay River Raft Supported Kayak Trip', '$849.00 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/KRRSKT');
                     break;
                 case 3:
-                    addTableRow('SUP Start Up', '$89.95 + GST', 'https://aqoutdoors.com/apps/courses/course/SSU');
+                    addTableRow('SUP Start Up', '$89.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/SSU');
                     break;
                 case 4:
-                    addTableRow('Youth Paddle Sports 5 Day', '$499.00 + GST', 'https://aqoutdoors.com/apps/courses/course/YRR5D');
-                    addTableRow('Teen River Kayaking 5 Day', '$499.00 + GST', 'https://aqoutdoors.com/apps/courses/course/YRK5DI');
-                    addTableRow('Youth Kayak Pool Sessions', '$175.00 + GST', 'https://aqoutdoors.com/apps/courses/course/GKPS');
-                    addTableRow('Micro Groms Kayak Club', 'Yet Another Value 2', 'https://aqoutdoors.com/apps/courses/course/SGKC');
-                    addTableRow('Super Groms Kayak Club', '$449.95 + GST', 'https://aqoutdoors.com/apps/courses/course/SGKC');
-                    addTableRow('Teen Kayak Club', '$749.00 + GST', 'https://aqoutdoors.com/apps/courses/course/TKC');
+                    addTableRow('Youth Paddle Sports 5 Day', '$499.00 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/YRR5D');
+                    addTableRow('Teen River Kayaking 5 Day', '$499.00 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/YRK5DI');
+                    addTableRow('Youth Kayak Pool Sessions', '$175.00 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/GKPS');
+                    addTableRow('Micro Groms Kayak Club', '$349.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/SGKC');
+                    addTableRow('Super Groms Kayak Club', '$449.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/SGKC');
+                    addTableRow('Teen Kayak Club', '$749.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/TKC');
                     break;
                 case 5:
-                    addTableRow('AWA/CKC L2/I2 Training Course ', '$349 plus $120 AWA Fee + GST', 'https://aqoutdoors.com/apps/courses/course/AL2I2C');
+                    addTableRow('AWA/CKC L2/I2 Training Course ', '$349 plus $120 AWA Fee + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/AL2I2C');
                     break;
                 case 6:
-                    addTableRow('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    addTableRow('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 default:
                     break;
             }
         }
 
-        function addTableRow(value1, value2, link) {
+        function addTableRow(value1, value2, value3, link) {
             const tableBody = document.getElementById('tableBody');
             const newRow = tableBody.insertRow();
 
@@ -139,12 +140,12 @@
             const cell1 = newRow.insertCell(0);
             const cell2 = newRow.insertCell(1);
             const cell3 = newRow.insertCell(2);
-            // const cell4 = newRow.insertCell(3);
+            const cell4 = newRow.insertCell(3);
 
             // Set cell values
             cell1.textContent = value1;
             cell2.textContent = value2;
-            // cell3.textContent = value3;
+            cell3.textContent = value3;
 
             // Set link and button
             const linkButton = document.createElement('a');
@@ -152,11 +153,17 @@
             linkButton.target = '_blank';
             linkButton.innerHTML = '<button id="courseInfo">Course Info</button>';
 
-            cell3.appendChild(linkButton);
+            cell4.appendChild(linkButton);
 
         }
         
     </script>
+
+
+
+<!-- EDMONTON COURSE BELOW -->
+
+
 
 <h2 style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; border-style: solid; border-color: #F79220; ">Edmonton Paddling Courses</h2>
     <div class="container" style="text-align: center;">
@@ -172,6 +179,7 @@
                 <tr>
                     <th>Course</th>
                     <th>Cost</th>
+                    <th>Experience Level</th>
                     <th></th>
                     <!-- <th>Course Link</th> -->
                 </tr>
@@ -180,7 +188,7 @@
                 <tr>
                     <td id="cell1Yeg">Value 1</td>
                     <td id="cell2Yeg">Value 2</td>
-                    <!-- <td id="cell3">Value 3</td> -->
+                    <td id="cell3">Value 3</td>
                     <td><a id="linkButtonYeg" href="https://www.example.com" target="_blank"><button>Course Info</button></a></td>
                 </tr>
             </tbody>
