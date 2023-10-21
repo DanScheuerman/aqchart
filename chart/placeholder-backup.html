@@ -1,0 +1,144 @@
+
+
+<h2 style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; border-style: solid; border-color: #F79220; ">Edmonton Paddling Courses</h2>
+    <div class="container" style="text-align: center;">
+        <button onclick="changeDataYeg(7)" id="rectouringYeg" class="menu-buttonYeg">Rec & Touring Kayaking</button>
+        <button onclick="changeDataYeg(8)" id="whitewaterYeg">Whitewater Kayaking</button>
+        <button onclick="changeDataYeg(9)" id="supYeg">SUP Boarding</button>
+        <button onclick="changeDataYeg(10)" id="youthYeg">Youth & Teen Kayaking</button>
+        <button onclick="changeDataYeg(11)" id="instructorYeg">Instructor Training</button>
+        <button onclick="changeDataYeg(12)" id="toursYeg">Kayaking Tours</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Cost</th>
+                    <th></th>
+                    <!-- <th>Course Link</th> -->
+                </tr>
+            </thead>
+            <tbody id="tableBodyYeg">
+                <tr>
+                    <td id="cell1Yeg">Value 1</td>
+                    <td id="cell2Yeg">Value 2</td>
+                    <!-- <td id="cell3">Value 3</td> -->
+                    <td><a id="linkButtonYeg" href="https://www.example.com" target="_blank"><button>Course Info</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+       
+
+        function setButtonStylesYeg(button, bgColor, textColor) {
+            button.style.backgroundColor = bgColor;
+            button.style.color = textColor;
+        }
+
+        function changeDataYeg(buttonNumber) {
+            const tableBodyYeg = document.getElementById('tableBodyYeg');
+            const linkButtonYeg = document.getElementById('linkButtonYeg');
+            const menuButtonYeg = document.getElementById('rectouringYeg');
+            const whitewaterButtonYeg = document.getElementById('whitewaterYeg');
+            const supButtonYeg = document.getElementById('supYeg');
+            const youthButtonYeg = document.getElementById('youthYeg');
+            const instructorButtonYeg = document.getElementById('instructorYeg');
+            const toursButtonYeg = document.getElementById('toursYeg');
+            // Clear existing rows
+            tableBodyYeg.innerHTML = '';
+
+            setButtonStylesYeg(menuButtonYeg, 'transparent', 'black');
+            setButtonStylesYeg(whitewaterButtonYeg, 'transparent', 'black');
+            setButtonStylesYeg(supButtonYeg, 'transparent', 'black');
+            setButtonStylesYeg(youthButtonYeg, 'transparent', 'black');
+            setButtonStylesYeg(instructorButtonYeg, 'transparent', 'black');
+            setButtonStylesYeg(toursButtonYeg, 'transparent', 'black');
+
+            // Set styles for the clicked button
+            switch (buttonNumber) {
+                case 7:
+                    setButtonStylesYeg(menuButtonYeg, '#064F9B', 'white');
+                    break;
+                case 8:
+                    setButtonStylesYeg(whitewaterButtonYeg, '#064F9B', 'white');
+                    // Add data for button 2 if needed
+                    break;
+                case 9:
+                    setButtonStylesYeg(supButtonYeg, '#064F9B', 'white');
+                    // Add data for button 3 if needed
+                    break;
+                case 10:
+                    setButtonStylesYeg(youthButtonYeg, '#064F9B', 'white');
+                    // Add data for button 4 if needed
+                    break;
+                case 11:
+                    setButtonStylesYeg(instructorButtonYeg, '#064F9B', 'white');
+                    // Add data for button 5 if needed
+                    break;
+                case 12:
+                    setButtonStylesYeg(toursButtonYeg, '#064F9B', 'white');
+                    // Add data for button 6 if needed
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonNumber) {
+                case 7:
+                    addTableRowYeg('Intro to Adventure Rec Kayaking', '$219.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITARKE');
+                    addTableRowYeg('Quick Start', '$89.95 + GST', 'https://aqoutdoors.com/apps/courses/course/EQS');
+                    addTableRowYeg('Discover Kayak Touring', '$279.95 + GST', 'https://aqoutdoors.com/apps/courses/course/EDKT');
+                    addTableRowYeg('Basic Kayak Safety and Skills', '$99.95 + GST', 'https://aqoutdoors.com/apps/courses/course/BKSAS');
+                    break;
+                case 8:
+                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    break;
+                    break;
+                case 9:
+                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    break;
+                    break;
+                case 10:
+                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    break;
+                    break;
+                case 11:
+                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    break;
+                    break;
+                case 12:
+                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function addTableRowYeg(value1, value2, link) {
+            const tableBodyYeg = document.getElementById('tableBodyYeg');
+            const newRowYeg = tableBodyYeg.insertRow();
+
+            // Add cells
+            const cell1Yeg = newRowYeg.insertCell(0);
+            const cell2Yeg = newRowYeg.insertCell(1);
+            const cell3Yeg = newRowYeg.insertCell(2);
+            // const cell4 = newRow.insertCell(3);
+
+            // Set cell values
+            cell1Yeg.textContent = value1;
+            cell2Yeg.textContent = value2;
+            // cell3.textContent = value3;
+
+            // Set link and button
+            const linkButtonYeg = document.createElement('a');
+            linkButtonYeg.href = link;
+            linkButtonYeg.target = '_blank';
+            linkButtonYeg.innerHTML = '<button id="courseInfo">Course Info</button>';
+
+            cell3Yeg.appendChild(linkButtonYeg);
+
+        }
+        
+    </script>

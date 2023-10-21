@@ -98,20 +98,24 @@
                     addTableRow('Quick Start', '$89.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/QS');
                     addTableRow('Quick Start Plus', '$164.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/QSP');
                     addTableRow('Intro to Sea Kayaking', '$279.95 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/ITK');
+                    addTableRow('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 2:
                     addTableRow('Intro to Whitewater Kayaking', '$349.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/ITRK');
                     addTableRow('Beyond the Intro', '$139.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/BI');
                     addTableRow('River Kayaking - The Next Step', '$139.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/BI');
                     addTableRow('5 Days Whitewater Kayaking Course - Instruction Only','$895.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/5DWKC');
-                    addTableRow('Beyond the Intro Evenings', '$399 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/CBTIE');
+                    addTableRow('Beyond the Intro Evenings', '$449.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/CBTIE');
                     addTableRow('Adult Kayak Club', '$779.95 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/AKC');
                     addTableRow('Introduction to Creek Boating', '$369.95 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/ITCB');
                     addTableRow('BC 5 Day Whitewater Kayaking Course - Instruction Only','$995.00 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/B5DWKCIO');
-                    addTableRow('Kootenay River Raft Supported Kayak Trip', '$849.00 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/KRRSKT');
+                    addTableRow('All About the Base Progression','$399.00 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/B5DWKCIO');
+                    addTableRow('Kootenay River Raft Supported Kayak Trip', '$849.00 + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/AATB');
+                    addTableRow('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 3:
                     addTableRow('SUP Start Up', '$89.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/SSU');
+                    addTableRow('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 4:
                     addTableRow('Youth Paddle Sports 5 Day', '$499.00 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/YRR5D');
@@ -120,11 +124,14 @@
                     addTableRow('Micro Groms Kayak Club', '$349.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/SGKC');
                     addTableRow('Super Groms Kayak Club', '$449.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/SGKC');
                     addTableRow('Teen Kayak Club', '$749.00 + GST', 'Intermediate', 'https://aqoutdoors.com/apps/courses/course/TKC');
+                    addTableRow('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 5:
                     addTableRow('AWA/CKC L2/I2 Training Course ', '$349 plus $120 AWA Fee + GST', 'Advanced', 'https://aqoutdoors.com/apps/courses/course/AL2I2C');
+                    addTableRow('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 6:
+                    addTableRow('Sorry, no courses currently offered', '', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     addTableRow('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 default:
@@ -167,9 +174,9 @@
 
 <h2 style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; border-style: solid; border-color: #F79220; ">Edmonton Paddling Courses</h2>
     <div class="container" style="text-align: center;">
-      <button onclick="changeDataYeg(7)" id="rectouringYeg" class="menu-buttonYeg">Rec & Touring Kayak</button>
+      <button onclick="changeDataYeg(7)" id="rectouringYeg" class="menu-buttonYeg">Recreational & Touring Kayak</button>
       <button onclick="changeDataYeg(8)" id="whitewaterYeg">Whitewater Kayaking</button>
-      <button onclick="changeDataYeg(9)" id="supYeg">SUP Boarding</button>
+      <button onclick="changeDataYeg(9)" id="supYeg">Paddleboarding</button>
       <button onclick="changeDataYeg(10)" id="youthYeg">Youth & Teen Kayaking</button>
       <button onclick="changeDataYeg(11)" id="instructorYeg">Instructor Training</button>
       <button onclick="changeDataYeg(12)" id="toursYeg">Kayaking Tours</button>
@@ -188,7 +195,7 @@
                 <tr>
                     <td id="cell1Yeg">Value 1</td>
                     <td id="cell2Yeg">Value 2</td>
-                    <td id="cell3">Value 3</td>
+                    <td id="cell3Yeg">Value 3</td>
                     <td><a id="linkButtonYeg" href="https://www.example.com" target="_blank"><button>Course Info</button></a></td>
                 </tr>
             </tbody>
@@ -253,36 +260,38 @@
 
             switch (buttonNumber) {
                 case 7:
-                    addTableRowYeg('Intro to Adventure Rec Kayaking', '$219.95 + GST', 'https://aqoutdoors.com/apps/courses/course/ITARKE');
-                    addTableRowYeg('Quick Start', '$89.95 + GST', 'https://aqoutdoors.com/apps/courses/course/EQS');
-                    addTableRowYeg('Discover Kayak Touring', '$279.95 + GST', 'https://aqoutdoors.com/apps/courses/course/EDKT');
-                    addTableRowYeg('Basic Kayak Safety and Skills', '$99.95 + GST', 'https://aqoutdoors.com/apps/courses/course/BKSAS');
+                    addTableRowYeg('Intro to Adventure Recreational Kayaking', '$219.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/ITARKE');
+                    addTableRowYeg('Quick Start', '$89.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/EQS');
+                    addTableRowYeg('Discover Kayak Touring', '$279.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/EDKT');
+                    addTableRowYeg('Basic Kayak Safety and Skills', '$99.95 + GST', 'Beginner', 'https://aqoutdoors.com/apps/courses/course/BKSAS');
+                    addTableRowYeg('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 8:
-                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
-                    break;
+                    addTableRowYeg('Not Available Right Now', '', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    addTableRowYeg('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 9:
-                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
-                    break;
+                    addTableRowYeg('Not Available Right Now', '', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    addTableRowYeg('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 10:
-                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
-                    break;
+                    addTableRowYeg('Not Available Right Now', '', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    addTableRowYeg('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 11:
-                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
-                    break;
+                    addTableRowYeg('Not Available Right Now', '', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    addTableRowYeg('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 case 12:
-                    addTableRowYeg('Not Available Right Now', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    addTableRowYeg('Not Available Right Now', '', '', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
+                    addTableRowYeg('Email for Custom Programs: courses@aquabatics.com', 'Varied', 'Varied', 'https://aqoutdoors.com/pages/kayak-sup-splitboard-courses-calgary-edmonton');
                     break;
                 default:
                     break;
             }
         }
 
-        function addTableRowYeg(value1, value2, link) {
+        function addTableRowYeg(value1, value2, value3, link) {
             const tableBodyYeg = document.getElementById('tableBodyYeg');
             const newRowYeg = tableBodyYeg.insertRow();
 
@@ -290,12 +299,12 @@
             const cell1Yeg = newRowYeg.insertCell(0);
             const cell2Yeg = newRowYeg.insertCell(1);
             const cell3Yeg = newRowYeg.insertCell(2);
-            // const cell4 = newRow.insertCell(3);
+            const cell4Yeg = newRowYeg.insertCell(3);
 
             // Set cell values
             cell1Yeg.textContent = value1;
             cell2Yeg.textContent = value2;
-            // cell3.textContent = value3;
+            cell3Yeg.textContent = value3;
 
             // Set link and button
             const linkButtonYeg = document.createElement('a');
@@ -303,7 +312,7 @@
             linkButtonYeg.target = '_blank';
             linkButtonYeg.innerHTML = '<button id="courseInfo">Course Info</button>';
 
-            cell3Yeg.appendChild(linkButtonYeg);
+            cell4Yeg.appendChild(linkButtonYeg);
 
         }
         
